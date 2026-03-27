@@ -61,7 +61,7 @@ requireStudent();
 renderCourseGrid();
 function goEnroll(id,title){window.location.href='enroll.php?id='+id+'&title='+encodeURIComponent(title);}
 
-// ── Load live courses from PHP when XAMPP is active ─────────
+//Load live courses from PHP when XAMPP is active 
 (function loadLiveCourses() {
   fetch('../includes/get_courses.php')
     .then(r => r.json())
@@ -94,7 +94,7 @@ function goEnroll(id,title){window.location.href='enroll.php?id='+id+'&title='+e
       });
       renderCourseGrid();
     })
-    .catch(() => {}); // keep COURSE_DATA fallback when XAMPP off
+    .catch(() => {});
 })();
 </script>
 </body>

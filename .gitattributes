@@ -1,0 +1,12 @@
+*.php linguist-language=PHP
+*.php linguist-detectable=true
+*.html linguist-language=HTML
+*.css linguist-language=CSS
+*.js linguist-language=JavaScript
+*.sql linguist-language=SQL
+
+# Force PHP detection
+includes/*.php linguist-language=PHP
+student/*.php linguist-language=PHP
+provider/*.php linguist-language=PHP
+admin/*.php linguist-language=PHP

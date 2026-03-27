@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../assets/css/shared.css"/>
   <link rel="stylesheet" href="../assets/css/Sujina.css"/>
   <style>
-    /* ── Top pill navbar (above hero) ── */
+    /*Top pill navbar (above hero)*/
     .profile-nav-wrapper { top: 16px; }
     .profile-nav {
       background: rgba(255,255,255,0.15) !important;
@@ -40,14 +40,14 @@
     @media(max-width:768px) { .profile-nav-links { display:none !important; } }
     @media(min-width:769px) { #hamburger { display:none !important; } }
 
-    /* ── Profile body: single column, full width ── */
+    /*Profile body: single column, full width*/
     .p-body-wrap {
       max-width: 1160px;
       margin: 0 auto;
       padding: 32px 24px 60px;
     }
 
-    /* ── Horizontal tab bar ── */
+    /*Horizontal tab bar*/
     .profile-tabs-bar {
       display: flex;
       align-items: center;
@@ -102,12 +102,12 @@
     .ptab-logout { color: #b91c1c !important; }
     .ptab-logout:hover { background: rgba(220,38,38,0.06) !important; }
 
-    /* ── Content area ── */
+    /*Content area*/
     .p-content { display: flex; flex-direction: column; gap: 20px; }
     .tab-pane  { display: none; }
     .tab-pane.active { display: block; }
 
-    /* ── Form card ── */
+    /*Form card*/
     .form-card {
       background: white;
       border-radius: 18px;
@@ -126,7 +126,7 @@
       color: var(--text-dark);
     }
 
-    /* ── Responsive: stack tabs on mobile ── */
+    /*Responsive: stack tabs on mobile*/
     @media(max-width:600px) {
       .profile-tabs-bar {
         padding: 8px 10px;

@@ -282,3 +282,35 @@ function showToast(msg, ok = true) {
   setTimeout(() => t.classList.remove('show'), 3400);
 }
 
+/*Tab switcher (profile page)*/
+function switchTab(name, el, prefix) {
+  const pre = prefix || 'pane';
+  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  
+  document.querySelectorAll('.p-nav a.tab-link').forEach(a => a.classList.remove('active'));
+  const pane = document.getElementById(pre + '-' + name);
+  if (pane) pane.classList.add('active');
+  if (el)   el.classList.add('active');
+}
+
+/*Enroll modal / payment*/
+function selectPayMethod(btn) {
+  document.querySelectorAll('.pm-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function processPayment(courseTitle, fee, provider, courseId) {
+  const name = (document.getElementById('payName') || {}).value?.trim();
+  const ref  = (document.getElementById('payRef')  || {}).value?.trim();
+  if (!name || !ref) { showToast('Please fill in your payment details.', false); return; }
+  const modal = document.getElementById('payModal');
+  if (modal) modal.classList.remove('open');
+  showToast('Processing payment…');
+  setTimeout(() => {
+    window.location.href = 'receipt.php?id=' + (courseId || '') +
+      '&course=' + encodeURIComponent(courseTitle) +
+      '&fee=' + encodeURIComponent(fee) +
+      '&provider=' + encodeURIComponent(provider);
+  }, 1500);
+}
+

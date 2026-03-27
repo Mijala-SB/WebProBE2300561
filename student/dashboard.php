@@ -106,7 +106,7 @@ animateProgressBars();
   fetch('../includes/get_dashboard_stats.php')
     .then(r => r.json())
     .then(data => {
-      if (!data.success) return;   // fallback: keep static HTML values
+      if (!data.success) return;  
       // Update stat boxes
       const set = (id, val) => { const el=document.getElementById(id); if(el) el.textContent=val; };
       set('statEnrolled',  data.enrolled_count  || 0);
@@ -123,7 +123,7 @@ animateProgressBars();
         });
       }
     })
-    .catch(() => {}); // silently ignore when XAMPP is off
+    .catch(() => {});
 })();
 </script>
 </body>
